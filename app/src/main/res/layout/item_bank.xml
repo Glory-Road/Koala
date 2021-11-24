@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bank_item"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginBottom="10dp"
+    android:paddingBottom="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--第一行-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/bank_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        tools:text="北京银行"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/bank_name"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        tools:text="1000万"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/in_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/mount"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        tools:text="18元"/>
+
+    <!--第二行-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/register_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bank_name"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        tools:text="户数2"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/min_mount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/register_count"
+        app:layout_constraintTop_toBottomOf="@+id/bank_name"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        tools:text="最小金额50万"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/in_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/min_mount"
+        app:layout_constraintTop_toBottomOf="@+id/bank_name"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        tools:text="进款日：9月10日"/>
+
+    <!--第三行-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/bank_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_count"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        tools:text="王先生"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/receive_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/bank_person"
+        app:layout_constraintTop_toBottomOf="@+id/register_count"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        tools:text="李先生"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/release_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/receive_person"
+        app:layout_constraintTop_toBottomOf="@+id/register_count"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        tools:text="张先生"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/front_money_receive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bank_person"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        tools:text="已收2万"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/front_money_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/front_money_receive"
+        app:layout_constraintTop_toBottomOf="@+id/bank_person"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        tools:text="打出2万"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
