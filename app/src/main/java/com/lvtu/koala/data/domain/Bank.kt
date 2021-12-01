@@ -13,4 +13,7 @@ data class Bank (
     val registerCount: Int,
     val minMount: Int,
     val inDate: String,
-)
+    var status: Int,
+){
+    var checked: Boolean = false
+}

@@ -14,6 +14,12 @@
         tools:replace="android:allowBackup"
         tools:targetApi="n">
         <activity
+            android:name=".ui.match.MatchDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.match.MatchHomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.add.FundActivity"
             android:exported="false" />
         <activity

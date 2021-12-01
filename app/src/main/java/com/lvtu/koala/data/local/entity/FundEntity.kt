@@ -17,4 +17,5 @@ data class FundEntity(
     @ColumnInfo(name = "bank_card") val bankCard: String,
     @ColumnInfo(name = "wechat") val wechat: String,
     @ColumnInfo(name = "phone") val phone: String,
+    @ColumnInfo(name = "bank_id") val bankId: Int,
 )

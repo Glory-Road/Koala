@@ -8,10 +8,12 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 import com.lvtu.koala.KoalaApplication
 import com.lvtu.koala.data.local.dao.BankDao
 import com.lvtu.koala.data.local.dao.FundDao
+import com.lvtu.koala.data.local.dao.MatchOrderDao
 import com.lvtu.koala.data.local.entity.BankEntity
 import com.lvtu.koala.data.local.entity.FundEntity
+import com.lvtu.koala.data.local.entity.MatchOrderEntity
 
-@Database(entities = [BankEntity::class, FundEntity::class], version = 4, exportSchema = false)
+@Database(entities = [BankEntity::class, FundEntity::class, MatchOrderEntity::class], version = 7, exportSchema = false)
 abstract class KoalaDatabase: RoomDatabase() {
     companion object {
         private const val TAG = "KoalaDatabase"
@@ -34,4 +36,6 @@ abstract class KoalaDatabase: RoomDatabase() {
     abstract fun getBankDao(): BankDao
 
     abstract fun getFundDao(): FundDao
+
+    abstract fun getMatchOrderDao(): MatchOrderDao
 }

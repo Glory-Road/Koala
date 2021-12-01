@@ -30,4 +30,16 @@ class FundRepository() {
             it.map { it.toDomain() }
         }
     }
+
+    fun getFundListByBank(bankId: Int): Single<List<Fund>> {
+        return dao.getFundListByBank(bankId).map {
+            it.map { it.toDomain() }
+        }
+    }
+
+    fun getUnMatchFundList(): Single<List<Fund>> {
+        return dao.getUnMatchFundList().map {
+            it.map { it.toDomain() }
+        }
+    }
 }

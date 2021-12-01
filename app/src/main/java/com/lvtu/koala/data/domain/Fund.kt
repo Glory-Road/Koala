@@ -6,10 +6,13 @@ data class Fund (
     val mount: Int,
     val outPrice: Float,
     val registerCount: Int,
-    val status: Int,
+    var status: Int,
     val planMount: Int,
     val unPlanMount: Int,
     val bankCard: String,
     val wechat: String,
     val phone: String,
-)
+    var bankId: Int,
+) {
+    var checked: Boolean = false
+}

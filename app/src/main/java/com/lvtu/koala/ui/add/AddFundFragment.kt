@@ -56,12 +56,12 @@ class AddFundFragment : Fragment() {
             val outPrice = mBinding.etOutPrice.text.toString().trim().toFloat()
             val registerCount = mBinding.etRegisterCount.text.toString().trim().toInt()
             val status = 0
-            val planMount = mBinding.etPlanMount.text.toString().trim().toInt()
-            val unPlanMount = mBinding.etUnPlanMount.text.toString().trim().toInt()
+            val planMount = 0
+            val unPlanMount = 0
             val bankCard = mBinding.etBankCard.text.toString()
             val wechat = mBinding.etWechat.text.toString()
             val phone = mBinding.etPhone.text.toString()
-            val fund = Fund(id, fundName, mount, outPrice, registerCount, status, planMount, unPlanMount, bankCard, wechat, phone)
+            val fund = Fund(id, fundName, mount, outPrice, registerCount, status, planMount, unPlanMount, bankCard, wechat, phone, -1)
             if (id > 0) {
                 mViewModel.updateFund(fund)
             } else {
@@ -81,8 +81,6 @@ class AddFundFragment : Fragment() {
         mBinding.etFundMount.setText(fund.mount.toString())
         mBinding.etOutPrice.setText(fund.outPrice.toString())
         mBinding.etRegisterCount.setText(fund.registerCount.toString())
-        mBinding.etPlanMount.setText(fund.planMount.toString())
-        mBinding.etUnPlanMount.setText(fund.unPlanMount.toString())
         mBinding.etBankCard.setText(fund.bankCard)
         mBinding.etWechat.setText(fund.wechat)
         mBinding.etPhone.setText(fund.phone)

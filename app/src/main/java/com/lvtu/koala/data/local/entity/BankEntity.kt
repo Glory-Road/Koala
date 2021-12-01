@@ -18,4 +18,5 @@ data class BankEntity(
     @ColumnInfo(name = "register_count") val registerCount: Int,
     @ColumnInfo(name = "min_mount") val minMount: Int,
     @ColumnInfo(name = "in_date") val inDate: String,
+    @ColumnInfo(name = "status") val status: Int,
 )

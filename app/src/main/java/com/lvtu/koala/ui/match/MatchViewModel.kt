@@ -6,11 +6,14 @@ import com.lvtu.koala.data.BankRepository
 import com.lvtu.koala.data.FundRepository
 import com.lvtu.koala.data.domain.Bank
 import com.lvtu.koala.data.domain.Fund
+import com.lvtu.koala.data.domain.MatchOrder
+import com.lvtu.koala.data.maper.MatchOrderRepository
 
 class MatchViewModel: ViewModel() {
 
     private val bankRepository = BankRepository()
     private val fundRepository = FundRepository()
+    private val matchRepository = MatchOrderRepository()
 
     var fundList: List<Fund>? = null
     var bankList: List<Bank>? = null
@@ -32,6 +35,10 @@ class MatchViewModel: ViewModel() {
             Log.w(TAG, "getFundList: $it")
             fundList = it
         }
+    }
+
+    fun saveMatchOrder(matchOrder: MatchOrder) {
+        matchRepository.addMatchOrder(matchOrder)
     }
 
     companion object{

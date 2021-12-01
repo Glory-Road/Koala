@@ -135,7 +135,7 @@ class AddBankFragment : Fragment() {
             val registerCount = mBinding.etRegisterCount.text.toString().trim().toInt()
             val minMount = mBinding.etMinMount.text.toString().trim().toInt()
             val inDate = mBinding.etInDate.text.toString().trim()
-            val bank = Bank(id, bankName, bankCode, mount, bankPerson, receivePerson, bankAddress, inPrice, frontMoneyReceive, registerCount, minMount, inDate)
+            val bank = Bank(id, bankName, bankCode, mount, bankPerson, receivePerson, bankAddress, inPrice, frontMoneyReceive, registerCount, minMount, inDate, 0)
             if (id > 0) {
                 mViewModel.updateBank(bank)
             } else {

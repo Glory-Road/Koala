@@ -8,8 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.lvtu.koala.R
-import com.lvtu.koala.data.domain.Match
+import com.lvtu.koala.data.domain.MatchOrder
 import com.lvtu.koala.databinding.FragmentMatchBinding
 
 class MatchFragment : Fragment() {
@@ -39,7 +38,8 @@ class MatchFragment : Fragment() {
 
     private fun initListener() {
         mBinding.launchMatch.setOnClickListener {
-            launchMatch()
+            MatchHomeActivity.start(requireContext())
+//            launchMatch()
         }
     }
 
@@ -59,7 +59,7 @@ class MatchFragment : Fragment() {
             it.registerCount
         }
         val funds = mViewModel.fundList?.toMutableList()
-        val matches = mutableListOf<Match>()
+        val matches = mutableListOf<MatchOrder>()
         //先匹配一对一
         Log.w(TAG, "匹配前 行口: ${banks?.size}-->$banks")
         Log.w(TAG, "匹配前 资方: ${funds?.size}-->$funds")
@@ -69,7 +69,7 @@ class MatchFragment : Fragment() {
                     for (fundIndex in funds.size - 1 downTo 0){
                         if (banks[bankIndex].registerCount == 1 && funds[fundIndex].registerCount == 1 && banks[bankIndex].mount == funds[fundIndex].mount) {
                             Log.w(TAG, "launchMatch: add")
-                            matches.add(Match(banks[bankIndex].bankName, banks[bankIndex].mount, mutableListOf(funds[fundIndex].fundName)))
+//                            matches.add(MatchOrder(banks[bankIndex].bankName, banks[bankIndex].mount, mutableListOf(funds[fundIndex].fundName)))
                             banks.removeAt(bankIndex)
                             funds.removeAt(fundIndex)
                         }
